@@ -1,24 +1,16 @@
-import Container from "../../components/common/Container"
-import { Button } from "../../components/common/Button";
-import { SectionTitle } from "../../components/common/SectionTitle";
-
+import Container from "../../components/common/Container";
+import Hero from "../../components/sections/Hero";
+import FeaturedProducts from "../../components/sections/FeaturedProducts";
+import Sectors from "../Sectors";
 
 export default function Home() {
-
   return (
-      <div>
-        <Container>
-          <h1>A.J.N Gases</h1>
-          <p>Soluçoes em gases industriais e medicinais.</p>
-      
-          <Button>
-            Saiba mais
-          </Button>
-    
-          <SectionTitle>
-            Nossos Produtos
-          </SectionTitle>
-        </Container>
-      </div>
+    <div>
+      <Container>
+        <Hero />
+        <FeaturedProducts />
+        <Sectors />
+      </Container>
+    </div>
   );
 }
