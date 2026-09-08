@@ -8,7 +8,7 @@ function About() {
         <Container>
             <SectionTitle>Sobre</SectionTitle>
             <h3>Nossa loja surgiu com o objetivo de oferecer produtos de qualidade e atendimento excepcional aos nossos clientes.</h3>
-            <img src="/public/gases-sobre.jpg" alt="Imagem da loja" />
+            <img src="/gases-sobre.jpg" alt="Imagem da loja" />
             <Button>Saiba mais</Button>
         </Container>
     </div>
