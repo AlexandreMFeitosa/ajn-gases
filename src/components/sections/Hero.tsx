@@ -5,7 +5,7 @@ function Hero() {
   return (
     <div>
       <Container>
-        <h1 className="text-5xl font-bold">AJN GASES</h1>
+        <h1 className="text-5xl font-bold">sobradinho-gases</h1>
 
         <p>Soluçoes em gases industriais e medicinais.</p>
 
