@@ -3,17 +3,34 @@ import Button from "../common/Button";
 
 function Hero() {
   return (
-    <div>
+    <section className="hero">
       <Container>
-        <h1 className="text-5xl font-bold">sobradinho-gases</h1>
+        <div className="hero-content">
+          <span className="hero-label">SOBRADINHO GASES</span>
 
-        <p>Soluçoes em gases industriais e medicinais.</p>
+          <h1>
+            Soluções em gases
+            <span>industriais e medicinais</span>
+          </h1>
 
-        <Button>Saiba mais</Button>
+          <p>
+            Produtos e soluções confiáveis para hospitais, clínicas,
+            empresas e diferentes setores industriais.
+          </p>
 
-        <img src="pexels-mm-dental-56682202-8260447.jpg" alt="Cilindros de gases industriais" />
+          <div className="hero-actions">
+            <Button>Conheça nossos produtos</Button>
+          </div>
+        </div>
+
+        <div className="hero-image-wrapper">
+          <img
+            src="/pexels-mm-dental-56682202-8260447.jpg"
+            alt="Cilindros de gases industriais"
+          />
+        </div>
       </Container>
-    </div>
+    </section>
   );
 }
 

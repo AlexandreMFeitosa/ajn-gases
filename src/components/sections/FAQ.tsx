@@ -1,7 +1,8 @@
 import SectionTitle from "../common/SectionTitle";
 import FAQItem from "../faq/FAQItem";
 import { faqs } from "../../data/faqs";
-import { Container } from "../common/Container";
+import Container from "../common/Container";
+
 
 function FAQ() {
   return (
