@@ -1,26 +1,29 @@
-type ButtonProps = {
-  children:React.ReactNode;
-  variant?:"primary" | "secondary";
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  children: React.ReactNode;
+  variant?: "primary" | "secondary";
 };
 
-export function Button({
+export default function Button({
   children,
   variant = "primary",
+  className = "",
+  ...props
 }: ButtonProps) {
-   
-  const baseClasses = "rounded-lg px-4 py-2 font-medium transition-colors";
+  
+  const variantStyles = {
+    primary: "bg-[#123b63] hover:bg-[#0b2947] text-white",
+    secondary: "bg-transparent border border-[#123b63] text-[#123b63] hover:bg-[#123b63] hover:text-white",
+  };
 
-const variants = {
-  primary: "bg-blue-600 text-white hover:bg-blue-700" ,
-  secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300"
-};
+  const baseStyles = "px-6 py-3 rounded font-medium transition-colors cursor-pointer inline-flex items-center justify-center";
 
-return (
-  <button className={`${baseClasses} ${variants[variant]}`}>
-    {children}
-  </button>
-);
+  return (
+    <button
+      type="button"
+      className={`${baseStyles} ${variantStyles[variant]} ${className}`}
+      {...props}
+    >
+      {children}
+    </button>
+  );
 }
-
-
-export default Button;

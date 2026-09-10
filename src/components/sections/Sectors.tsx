@@ -1,15 +1,21 @@
-import Container from "../common/Container"
-import SectionTitle from "../common/SectionTitle"
-import { sectors } from "../../data/sectors"
-import SectorsCard from "../sectors/SectorsCard"
+import Container from "../common/Container";
+import SectionTitle from "../common/SectionTitle";
+import { sectors } from "../../data/sectors";
+import SectorsCard from "../sectors/SectorsCard";
 
 function Sectors() {
   return (
-    <div>
+    <section className="sectors">
       <Container>
-        <SectionTitle>Setores</SectionTitle>
+        <div className="sectors-header">
+          <SectionTitle>Setores</SectionTitle>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+          <p>
+            Soluções em gases para diferentes necessidades e segmentos.
+          </p>
+        </div>
+
+        <div className="sectors-grid">
           {sectors.map((sector) => (
             <SectorsCard
               key={sector.id}
@@ -18,11 +24,10 @@ function Sectors() {
               image={sector.image}
             />
           ))}
-
         </div>
       </Container>
-    </div>
-  )
+    </section>
+  );
 }
 
-export default Sectors
+export default Sectors;

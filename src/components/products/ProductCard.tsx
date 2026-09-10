@@ -1,22 +1,30 @@
 import Button from "../common/Button";
 
-
 type ProductCardProps = {
-    name: string;
-    description: string;
-    image:string;
-  }
+  name: string;
+  description: string;
+  image: string;
+};
 
-function ProductCard({name, description, image}: ProductCardProps) {
+function ProductCard({
+  name,
+  description,
+  image,
+}: ProductCardProps) {
   return (
-    <div>
-      <img src={image} alt={name}/>
+    <article className="product-card">
+      <div className="product-card-image">
+        <img src={image} alt={name} />
+      </div>
 
-      <h3>{name}</h3>  
-      <p>{description}</p>
+      <div className="product-card-content">
+        <h3>{name}</h3>
 
-      <Button>Saiba mais</Button>
-    </div>
+        <p>{description}</p>
+
+        <Button>Saiba mais</Button>
+      </div>
+    </article>
   );
 }
 
