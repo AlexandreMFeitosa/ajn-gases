@@ -6,13 +6,17 @@ import { products } from "../../data/products";
 
 function FeaturedProducts() {
   return (
-    <div>
+    <section className="featured-products">
       <Container>
-        <SectionTitle>Nossos Produtos</SectionTitle>
+        <div className="featured-products-header">
+          <SectionTitle>Nossos Produtos</SectionTitle>
+          
+          <p>
+            Conheça algumas das nossas principais soluções.
+          </p>
+        </div>
 
-        <p>Conheça algumas das nossas principais soluções.</p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+        <div className="products-grid">
           {products.map((product) => (
             <ProductCard
               key={product.id}
@@ -23,9 +27,11 @@ function FeaturedProducts() {
           ))}
         </div>
 
-        <Button>Ver Produtos</Button>
+        <div className="featured-products-action">
+          <Button>Ver Produtos</Button>
+        </div>
       </Container>
-    </div>
+    </section>
   );
 }
 
